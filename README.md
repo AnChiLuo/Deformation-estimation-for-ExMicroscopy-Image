@@ -9,7 +9,7 @@ Following Abbe's diffraction limit, the resolution of optical microscopy is limi
     1.  Elastix needs to be installed on your device, which can be downloaded here https://elastix.dev/download.php        
     2.  Add the ELASTIX_PATH to the environment variable helping PyElatix to detect the executable Elastix.      
 #Module Dependencies:      
-    1.Scikit-image 0.19.2        2.matplotlib 3.8.0        3.OpenCV 4.8.1.78        4.Pandas 2.0.3  
+    1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&nbsp;2.matplotlib 3.8.0&nbsp;&nbsp;&nbsp;&nbsp;3.OpenCV 4.8.1.78&nbsp;&nbsp;&nbsp;&nbsp;4.Pandas 2.0.3
 
 
 

@@ -6,6 +6,12 @@ For the PyElastix:
  1.Use the "pip install pyelastix" or "conda install pyelastix -c conda-forge" to install the library.
  2.Replace the "pyelastix.py" in your Python "site-package" file with the new "pyelastix.py" provided in this repository.
 For the Elastix:
- 1. The main program can be download here https://elastix.dev/download.php 
+ 1. Elastix needs to be installed on your device,which can be downloaded here https://elastix.dev/download.php
+ 2. Add the ELASTIX_PATH to the environment variable helping PyElatix to detect the executable Elastix.
+Module Dependencies:
+1.Scikit-image 0.19.2 
+2.matplotlib 3.8.0 
+3.OpenCV 4.8.1.78
+4.Pandas 2.0.3
 
 

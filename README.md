@@ -1,3 +1,4 @@
 # Deformation-estimation-for-ExMicroscopy-Image
-Following Abbe's diffraction limit, the resolution of optical microscopy is limited to 200 nm.  This tool warps PyElastix   
-Here we provide a tool for  
+Following Abbe's diffraction limit, the resolution of optical microscopy is limited to 200 nm.  This resolution is not enough for modern biologists to observe the intracellular phenomenon or subcellular structure. Expansion microscopy(ExM) solves this problem by expanding biological samples through the polymer system, which provides investigators higher resolution without using specialized equipment, such as electron microscopy. The expansion procedure should be isotropic to avoid structre deformation. One way to evaluate the isotropy of ExM is computing the deformation vector field between images(before/ after ExM) via a nonrigid registration process. After the   
+
+To quantify the isotropy of ExM, we calculated the deformation vector field between the images via a nonrigid registration process (fig. S3). From this vector field, we quantified the root-mean-square (RMS) error of feature measurements post-ExM. 

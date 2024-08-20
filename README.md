@@ -3,7 +3,7 @@ Following Abbe's diffraction limit, the resolution of optical microscopy is limi
 
 # Installation
 For the PyElastix:     
-"\t"1.Use the "pip install pyelastix" or "conda install pyelastix -c conda-forge" to install the library.  
+    1.Use the "pip install pyelastix" or "conda install pyelastix -c conda-forge" to install the library.  
    2.Replace the "pyelastix.py" in your Python "site-package" file with the new "pyelastix.py" provided in this repository.  
 For the Elastix:  
 >1.Elastix needs to be installed on your device,which can be downloaded here https://elastix.dev/download.php  

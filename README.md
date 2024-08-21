@@ -14,14 +14,16 @@ We modified PyElastix to fetch registration data and call the similarity registr
 * Module Dependencies:  
 This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&nbsp;2.matplotlib 3.8.0&nbsp;&nbsp;&nbsp;&nbsp;3.OpenCV 4.8.1.78&nbsp;&nbsp;&nbsp;&nbsp;4.Pandas 2.0.3	
 # Run ExM deformation analysis
-## Start the GUI
+### Start the GUI ###
 1.  Open the anaconda prompt and change the working directory to the folder that includes ExM deformation analysis.py
-2.  Start running GUI with python ExM deformation analysis.py 
+2.  Start running GUI with:  
 
-After "ExM deformation analysis" started running, two Wind
-* First item in an unordered list.
-* Another item.
-* Here we go again.
+    	python ExM deformation analysis.py 
+
+3.  Two separate windows, "Show Image" and "RMS analysis", will pop up, chose the analysis model from "RMS analysis" window. 
+### Step-by-step demo ###
+* Start with Image model
+* Start with Transformix output
 		   
     
 

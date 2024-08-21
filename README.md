@@ -22,8 +22,12 @@ This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&n
 
 3.  Two separate windows, "Show Image" and "RMS analysis", will pop up, chose the analysis model from "RMS analysis" window. 
 ### Step-by-step demo ###
-* Start with Image model
+* Start with Image model  
+  This model requires images as input to run the quantification. If you are unfamiliar with Elastix or ImageJ, we highly recommend you choose this model.
+1. Click `Browse` button on "Import Data region" to load images. Images must have the same size. Optionally check images on "Show Image" window by clicking `Preview` button.
+2. Click `Gonext` button. If the size of images is different, you will see the warning on "Show Image" window. 
 * Start with Transformix output
+ <mark>螢光標記</mark>
 		   
     
 

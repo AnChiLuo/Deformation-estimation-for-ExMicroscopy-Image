@@ -26,10 +26,12 @@ This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&n
   This model requires images as input to run the quantification. If you are unfamiliar with Elastix or ImageJ, we highly recommend you choose this model.
 1. Click the `Browse` button on the "Import Data region" to load images. Images must have the same size. Optionally check images on the "Show Image" window by clicking the `Preview` button.
 2. Click the `Gonext` button. If two images are of different sizes, you will see the warning on the "Show Image" window.
-3. Set the parameters on the "Similarity Registration region" of the "RMS analysis" window. Select <font color=cyan>Smooth checkbox</font> to apply Gaussian blurring on the images when the resolutions of images are too different. 
+3. Set the parameters on the "Similarity Registration region" of the "RMS analysis" window. Select $${\color{lightblue}Smooth\space checkbox}$$ to blur the images with the Gaussian filter when their resolutions are too different.
+   *Number Of Resolutions (int): Most registration algorithms adopt a multiresolution approach to direct the solution towards a global optimum and to speed up the process. This parameter specifies the number of scales to apply the registration at. (default 4)
+MaximumNumberOfIterations (int): Maximum number of iterations in each resolution level. 200-2000 works usually fine for nonrigid registration. The more, the better, but the longer computation time. This is an important parameter! (default 500). 
 * Start with Transformix output
  <mark>螢光標記</mark>
-<font color=red size=5>color=gray</font>
+
 
 		   
     

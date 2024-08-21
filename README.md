@@ -24,10 +24,13 @@ This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&n
 ### Step-by-step demo ###
 * Start with Image model  
   This model requires images as input to run the quantification. If you are unfamiliar with Elastix or ImageJ, we highly recommend you choose this model.
-1. Click `Browse` button on "Import Data region" to load images. Images must have the same size. Optionally check images on "Show Image" window by clicking `Preview` button.
-2. Click `Gonext` button. If the size of images is different, you will see the warning on "Show Image" window. 
+1. Click the `Browse` button on the "Import Data region" to load images. Images must have the same size. Optionally check images on the "Show Image" window by clicking the `Preview` button.
+2. Click the `Gonext` button. If two images are of different sizes, you will see the warning on the "Show Image" window.
+3. Set the parameters on the "Similarity Registration region" of the "RMS analysis" window. Select <font color=cyan>Smooth checkbox</font> to apply Gaussian blurring on the images when the resolutions of images are too different. 
 * Start with Transformix output
  <mark>螢光標記</mark>
+<font color=red size=5>color=gray</font>
+
 		   
     
 

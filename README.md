@@ -26,9 +26,11 @@ This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&n
   This model requires images as input to run the quantification. If you are unfamiliar with Elastix or ImageJ, we highly recommend you choose this model.
 1. Click the `Browse` button on the "Import Data region" to load images. Images must have the same size. Optionally check images on the "Show Image" window by clicking the `Preview` button.
 2. Click the `Gonext` button. If two images are of different sizes, you will see the warning on the "Show Image" window.
-3. Set the parameters on the "Similarity Registration region" of the "RMS analysis" window. Select $${\color{lightblue}Smooth\space checkbox}$$ to blur the images with the Gaussian filter when their resolutions are too different.
-   *Number Of Resolutions (int): Most registration algorithms adopt a multiresolution approach to direct the solution towards a global optimum and to speed up the process. This parameter specifies the number of scales to apply the registration at. (default 4)
-MaximumNumberOfIterations (int): Maximum number of iterations in each resolution level. 200-2000 works usually fine for nonrigid registration. The more, the better, but the longer computation time. This is an important parameter! (default 500). 
+3. Set the parameters on the "Similarity Registration region" of the "RMS analysis" window. Select $${\color{lightblue}Smooth\space checkbox}$$ to blur the images with the Gaussian filter when their resolutions are too different.  
+   *Three parameters of Registrater can be adjusted:
+   	1.  Number Of Resolutions (int): Elastix adopts a multiresolution strategy to speed up the process. The higher value, the more smoothing and downsampling are imepled on images. (default 4)
+   	2.  MaximumNumber Of Iterations (int): This value limitates the iterations times in each resolution level. Increasing it can get the more robust registration, but the compution time will be longer. 200-2000 works usually fine for nonrigid registration. (default 500).
+   	3.  Maximum Step Length (int):  This parameter refers to how many voxel/pixel displacement can be apply between two iterations. Increasing this parameter makes your program faster, but Stepsize too big may cause Elastix unstable and to send the images too far appart.
 * Start with Transformix output
  <mark>螢光標記</mark>
 

@@ -20,17 +20,20 @@ This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&n
 
     	python ExM deformation analysis.py 
 
-3.  Two separate windows, "Show Image" and "RMS analysis", will pop up, chose the analysis model from "RMS analysis" window. 
+3.  Two separate windows, "Show Image"(for displaying results) and "RMS analysis"(for controlling our program), will pop up, chose the analysis model from "RMS analysis" window. 
 ### Step-by-step demo ###
 * Start with Image model  
   This model requires images as input to run the quantification. If you are unfamiliar with Elastix or ImageJ, we highly recommend you choose this model.
 1. Click the `Browse` button on the "Import Data region" to load images. Images must have the same size. Optionally check images on the "Show Image" window by clicking the `Preview` button.
-2. Click the `Gonext` button. If two images are of different sizes, you will see the warning on the "Show Image" window.
+2. Click the `GoNext` button. If two images are of different sizes, you will see the warning on the "Show Image" window.
 3. Set the parameters on the "Similarity Registration region" of the "RMS analysis" window. Select $${\color{lightblue}Smooth\space checkbox}$$ to blur the images with the Gaussian filter when their resolutions are too different.  
-   *Three parameters of Registrater can be adjusted:
+   *Three parameters for registrater can be adjusted:
    	1.  Number Of Resolutions (int): Elastix adopts a multiresolution strategy to speed up the process. The higher value, the more smoothing and downsampling are imepled on images. (default 4)
-   	2.  MaximumNumber Of Iterations (int): This value limitates the iterations times in each resolution level. Increasing it can get the more robust registration, but the compution time will be longer. 200-2000 works usually fine for nonrigid registration. (default 500).
-   	3.  Maximum Step Length (int):  This parameter refers to how many voxel/pixel displacement can be apply between two iterations. Increasing this parameter makes your program faster, but may cause Elastix  crushing when it's too big.
+   	2.  MaximumNumber Of Iterations (int): This value limits the iterations times in each resolution level. Increasing it can get a more robust registration, but the computation time will be longer. 200-2000 works usually fine for nonrigid registration. (default 800).
+   	3.  Maximum Step Length (int):  This parameter refers to how many voxel/pixel displacements can be applied between two iterations. Increasing this parameter makes your program faster, but may cause Elastix crushing when it's too big. (default 5).
+4.  Click the `GoNext` button and await the registration result. If it's not good enough, click `Go Back` button on the "beta-spline Registration region to reset the parameters and rerun the similarity registration.
+5.  Set the parameters on the "beta-spline Registration region" and click the 'GoNext' button to run the nonrigid registration.
+6.  
 * Start with Transformix output
  <mark>螢光標記</mark>
 

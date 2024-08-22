@@ -35,7 +35,9 @@ This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&n
 5.  Set the parameters on the "beta-spline Registration region" and click the 'GoNext' button to run the nonrigid registration.
 6.  Check the $${\color{lightblue}Reference\space checkbox}$$ and click the `Browse` button to import your skeleton image. Otherwise, this program will automatically extract features by skeletonizing your image. Optionally change the unit of the result by selecting the `Set scaling checkbox`.
 7.  Click the `GoNext` button on the "Calculate Structure Deflection region" to calculate the length change of features. To speed up this process, you can down-sampling the feature size by increasing the "Sampling size of Skeleton" value.
-8.    
+8. Set the parameters and click the `GoNext` button on the "Calculate Root mean square(RMS) and plot region" to calculate the RMS values. You can adjust the resolution for RMS calculation using the "Length interval" parameter, which is inversely proportional to the resolution.
+9. 	
+   
 * Start with Transformix output
  <mark>螢光標記</mark>
 

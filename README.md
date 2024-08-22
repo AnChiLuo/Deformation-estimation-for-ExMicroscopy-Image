@@ -30,7 +30,7 @@ This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&n
    *Three parameters of Registrater can be adjusted:
    	1.  Number Of Resolutions (int): Elastix adopts a multiresolution strategy to speed up the process. The higher value, the more smoothing and downsampling are imepled on images. (default 4)
    	2.  MaximumNumber Of Iterations (int): This value limitates the iterations times in each resolution level. Increasing it can get the more robust registration, but the compution time will be longer. 200-2000 works usually fine for nonrigid registration. (default 500).
-   	3.  Maximum Step Length (int):  This parameter refers to how many voxel/pixel displacement can be apply between two iterations. Increasing this parameter makes your program faster, but Stepsize too big may cause Elastix unstable and to send the images too far appart.
+   	3.  Maximum Step Length (int):  This parameter refers to how many voxel/pixel displacement can be apply between two iterations. Increasing this parameter makes your program faster, but may cause Elastix  crushing when it's too big.
 * Start with Transformix output
  <mark>螢光標記</mark>
 

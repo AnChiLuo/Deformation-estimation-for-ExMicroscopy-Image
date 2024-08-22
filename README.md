@@ -1,5 +1,5 @@
 # Deformation-estimation-for-ExMicroscopy-Image
-Following Abbe's diffraction limit, the resolution of optical microscopy is limited and insufficient for modern biologists to observe the intracellular phenomenon or subcellular structure. Expansion microscopy(ExM) solves this problem by expanding biological samples, which provides investigators with higher resolution without using specialized equipment. Its expansion procedure should be isotropic to avoid structure deformation. Therefore the extent of structure deformation represents the quality of ExM.To calculate it, a deformation vector field between two images(Pre and Post-ExM) is generated via a nonrigid registration process. Then, the root-mean-square (RMS) error of feature on Post_ExM images is computed to quantity the consistency in length varying of specific structures before and after ExM. Here, we build a GUI tool based on Chozinski et al.'s method to run the above quantification. Our tool warps a Python module-PyElastix and the Elastix registration toolkit to register images, and the RMS calculation can also be done on our tool without changing tools.
+Following Abbe's diffraction limit, the resolution of optical microscopy is limited and insufficient for modern biologists to observe the intracellular phenomenon or subcellular structure. Expansion microscopy(ExM) solves this problem by expanding biological samples, which provides investigators with higher resolution without using specialized equipment. Its expansion procedure should be isotropic to avoid structure deformation. Therefore the extent of structure deformation represents the quality of ExM.To calculate it, a deformation vector field between two images(Pre and Post-ExM) is generated via a nonrigid registration process. Then, the root-mean-square (RMS) error of feature on Post_ExM images is computed to quantity the consistency in length change of specific structures before and after ExM. Here, we build a GUI tool based on Chozinski et al.'s method to run the above quantification. Our tool warps a Python module-PyElastix and the Elastix registration toolkit to register images, and the RMS calculation can also be done on our tool without changing tools.
 
 # Installation
 * For our tool:     
@@ -33,7 +33,9 @@ This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&n
    	3.  Maximum Step Length (int):  This parameter refers to how many voxel/pixel displacements can be applied between two iterations. Increasing this parameter makes your program faster, but may cause Elastix crushing when it's too big. (default 5).
 4.  Click the `GoNext` button and await the registration result. If it's not good enough, click `Go Back` button on the "beta-spline Registration region to reset the parameters and rerun the similarity registration.
 5.  Set the parameters on the "beta-spline Registration region" and click the 'GoNext' button to run the nonrigid registration.
-6.  
+6.  Check the $${\color{lightblue}Reference\space checkbox}$$ and click the `Browse` button to import your skeleton image. Otherwise, this program will automatically extract features by skeletonizing your image. Optionally change the unit of the result by selecting the `Set scaling checkbox`.
+7.  Click the `GoNext` button on the "Calculate Structure Deflection region" to calculate the length change of features. To speed up this process, you can down-sampling the feature size by increasing the "Sampling size of Skeleton" value.
+8.    
 * Start with Transformix output
  <mark>螢光標記</mark>
 

@@ -39,7 +39,11 @@ This tool also relies on the packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&n
 9.  Click the `GoNext` button on the "Plot the Deformation map region" to draw the deformation vector field on the image. The raw image is the default setting, even if you have applied the Gaussian filter in previous steps.
 * Start with Transformix output model
   This model allows you to calculate the RMS values from the data obtained by using Chozinski's method.
-  1. 
+1. Import the Transformix output data-"outputpoints.txt" by clicking the `Browse` button on the "Import the data of skeleton region".
+2. Optionally check the $${\color{lightblue}Set\space scaling\space checkbox}$$ and set the scaling factors to change the unit of the RMS values.
+3. Click the `GoNext` button on the "Import the data of skeleton region" to calculate the length change of features. You can also increase the "Sampling size of Skeleton" value to speed up the calculation.
+4.  Set the parameters and click the `GoNext` button on the "Calculate Root mean square(RMS) and plot region" to calculate the RMS values. You can adjust the resolution for RMS calculation using the "Length interval" parameter, which is inversely proportional to the resolution. 
+  
  <mark>螢光標記</mark>
 
 

@@ -3,7 +3,7 @@ Following Abbe's diffraction limit, the resolution of optical microscopy is limi
 
 # Installation
 * Module Dependencies:  
-This tool also relies on the other packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&nbsp;2.matplotlib 3.8.0&nbsp;&nbsp;&nbsp;&nbsp;3.OpenCV 4.8.1.78&nbsp;&nbsp;&nbsp;&nbsp;4.Pandas 2.0.3&nbsp;&nbsp;&nbsp;&nbsp5.PyElastix	  
+This tool also relies on the other packages: 1.Scikit-image 0.19.2&nbsp;&nbsp;&nbsp;&nbsp;2.matplotlib 3.8.0&nbsp;&nbsp;&nbsp;&nbsp;3.OpenCV 4.8.1.78&nbsp;&nbsp;&nbsp;&nbsp;4.Pandas 2.0.3&nbsp;&nbsp;&nbsp;&nbsp;5.PyElastix	  
 * For the PyElastix:  
 We modified PyElastix to fetch registration data and call the similarity registration function of Elastix. So, please update your installed PyElastix to our version.  
 	1. Use the "pip install pyelastix" or "conda install pyelastix -c conda-forge" to install the library.          

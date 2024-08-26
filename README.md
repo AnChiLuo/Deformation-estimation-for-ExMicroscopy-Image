@@ -21,22 +21,22 @@ We modified PyElastix to fetch registration data and call the similarity registr
 
     	python ExM deformation analysis.py 
 
-3.  Two separate windows, "Show Image"(for displaying results) and "RMS analysis"(the control panel), will pop up, chose the entrance from the "RMS analysis" window. 
+3.  Two separate windows, "Show Image"(for displaying results) and "RMS analysis"(the control panel), will pop up.Then chose the entrance from the "RMS analysis" window. 
 ### Step-by-step demo ###
-The image deformation can be stepwisely quantified within the same platform with our tool. You can use `GoBack` to redo the previous step if you are not satisfied with the current result and a Save result  button is available to save the confirmed results.
+The image deformation can be stepwisely quantified within the same platform with our tool. You can use `GoBack` to redo the previous step if you are not satisfied with the current result and a `Save result`  button is available to save the confirmed results.
 
 * **Start with Image model**    
-  This entrance requires images as input to run the quantification. If you are unfamiliar with Elastix or ImageJ, we highly recommend you choose it.
+  This entrance requires images as input to run the quantification. If you are unfamiliar with Elastix or ImageJ, we highly recommend you to choose it.
 1. Click the `Browse` button on the "Import Data region" to load images. Images must have the same size. Optionally check images on the "Show Image" window by clicking the `Preview` button.
-2. Click the `GoNext` button. If the images are different sizes, you will see a warning.
-3. Set the parameters on the "Similarity Registration region" of the "RMS analysis" window. Select $${\color{blue}Smooth\space checkbox}$$ to blur the images with the Gaussian filter when the pre-ExM image is too vague comparing to the post-ExM image..  
+2. Click the `GoNext` button. If the images are in different size, you will see a warning.
+3. Set the parameters on the "Similarity Registration region" of the "RMS analysis" window. Select $${\color{blue}Smooth\space checkbox}$$ to blur the PostExM images with the Gaussian filter when the pre-ExM image is too vague comparing to the post-ExM image..  
    *Three parameters for registration can be adjusted:
    	1.  Number Of Resolutions (int): Elastix adopts a multiresolution strategy to speed up the process. The higher the value you set, the smoother and downsampler tools are applied. (default 4). 
    	2.  MaximumNumber Of Iterations (int): This value limits the iterations in each resolution level.  You will get a robust registration, but longer computation time will be the trade-off. The value 200-2000 works usually fine for nonrigid registration. (default 800).
    	3.  Maximum Step Length (int):  This parameter refers to the freedom of deforming the Post-expansion image to fit the Pre-expansion image between iterations. Increasing this parameter makes it faster, but may cause Elastix to crush. (default 5).
 4.  Click the `GoNext` button and await the registration result. If your result is not good enough, click `Go Back` button on the "beta-spline Registration region to run the similarity registration again with newly refined parameters.
 5.  Set the parameters on the "beta-spline Registration region" and click the 'GoNext' button to run the nonrigid registration.
-6.  Check the $${\color{blue}Reference\space checkbox}$$ and click the `Browse` button to import your skeleton image. Otherwise, this program will automatically extract features by skeletonizing your image. Optionally change the unit of the result by selecting the $${\color{blue}Set\space scaling\space checkbox}$$.
+6.  Check the $${\color{blue}Reference\space checkbox}$$ and click the `Browse` button to import your skeleton image. If you don't have your own skeleton image, this program will automatically extract features to generate one for you skeletonizing your image. Optionally change the unit of the result by selecting the $${\color{blue}Set\space scaling\space checkbox}$$.
 7.  Click the `GoNext` button on the "Calculate Structure Deflection region" to calculate the length change of features. To speed up this process, you can down-sampling the feature size by increasing the "Sampling size of Skeleton" value.
 8. Set the parameters and click the `GoNext` button on the "Calculate Root mean square(RMS) and plot region" to calculate the RMS values. You can adjust the resolution for RMS calculation using the "Length interval" parameter, which is inversely proportional to the resolution.
 9.  Click the `GoNext` button on the "Plot the Deformation map region" to draw the deformation vector field on the image. The raw image will be adopted here, even if you have applied the Gaussian filter in previous steps.
@@ -48,7 +48,8 @@ The image deformation can be stepwisely quantified within the same platform with
 4. Set the parameters and click the `GoNext` button on the "Calculate Root mean square(RMS) and plot region" to calculate the RMS values. Set the "Length interval" parameter to adjust the resolution for RMS calculation. The higher the value you choose, the lower the resolution you get.
 5. To draw the Deformation map, use the `Browse` buttons to import images and the outputpoints.txt file generated by deforming an array of points with Transformix.
 # Figures
-<img src="https://github.com/user-attachments/assets/a5bc25e5-adea-45d9-82f4-bcbf03aae7e6" width="600" />
+<img src="https://github.com/user-attachments/assets/b1ec0e62-46df-440b-a90a-e7f375cd1778" width="600" />
+
 
 # Reference   
 1. S. Klein, M. Staring, K. Murphy, M.A. Viergever, J.P.W. Pluim, "elastix: a toolbox for intensity based medical image registration," IEEE Transactions on Medical Imaging, vol. 29, no. 1, pp. 196 - 205, January 2010.
